@@ -21,6 +21,7 @@ const routes = require('./routes')
 
 const LOCAL = `mongodb://localhost:27017/rickmorty${process.env.NODE_ENV === 'test' ? '-test' : ''}`
 const db = process.env.NODE_ENV === 'production' ? process.env.DATABASE : LOCAL
+console.log(db);
 const server = new ApolloServer({
   typeDefs,
   resolvers,
